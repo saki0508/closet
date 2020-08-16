@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Closet</title>
+    <title>GoodCloset</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+    <header class="header">
+      <div class="header_bar">
+         <h1><a href="#">Good Closet</a></h1>
+         <nav>
+           <ul class="user_info">
+             <li><a href="#">マイページ</a></li>
+             <li><a href="#">ログアウト</a></li>
+             <li><a href="#">ファッション相談</a></li>
+           </ul>
+         </nav>
+         <nav>
+           <ul class="user_info">
+             <li><a href="#">ログイン</a></li> 
+             <li><a href="#">新規登録</a></li>
+           </ul>
+         </nav>
+       </div>
+     <p>ニックネームさん</p>
+    </header>
+      <%= yield %>
+    <footer>
+      <p>
+        Copyright Good Closet.
+      </p>
+    </footer>
   </body>
 </html>
