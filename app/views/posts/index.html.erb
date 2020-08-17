@@ -2,4 +2,23 @@
   <div class="title-container">
     <h2>服で繋がろう<h2>
   </div>
+
+  <div class="post-container">
+    <div class="post-title">
+     <p>みんなのコーディネート相談</p>
+    </div>
+    <div class="posts">
+     <% @posts.each do |post| %>
+      <li class="post">
+       <p><%= post.title %></p>
+       <% post.images.each do |image| %>
+         <%= image_tag(image.variant(resize:'500x300')) %>
+       <% end %>
+      </li>
+     <% end %>
+    </div>
+    
+  </div>
+
+  
 </div>

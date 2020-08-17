@@ -17,7 +17,7 @@
            <% if user_signed_in? %>
              <li><a href="#">my closet</a></li>
              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-             <li><a href="#">ファッション相談</a></li>
+             <li><%= link_to 'ファッション相談', new_post_path, class: "new-post" %></li>
            <%else%>        
              <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li> 
              <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
@@ -25,7 +25,7 @@
            </ul>
          </nav>
        </div>
-     <p>ニックネームさん</p>
+     <p><%= current_user.nickname %>さん</p>
     </header>
       <%= yield %>
     <footer>
