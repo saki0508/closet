@@ -1,8 +1,8 @@
 <div class="post-details">
   <div class="post-show">
    <p><%=@post.user.nickname%></p>
-   <p>件名：<%= @post.title %></p>
 
+   <p>件名：<%= @post.title %></p>
 
    <% @post.images.each do |image| %>
     <%= image_tag(image.variant(resize:'500x300')) %>      
@@ -10,7 +10,12 @@
 
    <p>相談内容：<%= @post.text %></p>
   </div>   
-     
+</div>
+
+<div class="edit-btn">
+ <% if user_signed_in? && current_user.id == @post.user.id %>
+  <%= link_to '編集する', edit_post_path(@post.id), class:'post-edit' %>
+ <%end%>
 </div>
 
     

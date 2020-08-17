@@ -29,10 +29,12 @@ header {
 }
 
 h1 {
-  text-decoration: none;
   font-size: 30px;
-  
-  
+}
+
+.header-title {
+  text-decoration: none;
+
 }
 
 .user_info{
@@ -49,3 +51,21 @@ h1 {
   margin-right: 15px;
   
 }
+
+.logout {
+  text-decoration: none;
+}
+
+.new-post {
+  text-decoration: none;
+
+}
+ .login {
+  text-decoration: none;
+
+ }
+
+ .sign-up {
+  text-decoration: none;
+
+ }
