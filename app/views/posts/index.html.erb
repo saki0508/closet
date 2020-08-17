@@ -10,10 +10,12 @@
     <div class="posts">
      <% @posts.each do |post| %>
       <li class="post">
-       <p><%= post.title %></p>
+       <%= link_to post_path(post.id) do %>
+       <p>件名：<%= post.title %></p>
        <% post.images.each do |image| %>
          <%= image_tag(image.variant(resize:'500x300')) %>
        <% end %>
+       <%end%>
       </li>
      <% end %>
     </div>
