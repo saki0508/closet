@@ -1,0 +1,20 @@
+
+.comment-form {
+  display: flex;
+  justify-content: center;
+}
+
+.comments {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.comments, h3 {
+  margin: 30px 0 10px;
+}
+
+.comment {
+  margin: 10px 0 10px;
+}
