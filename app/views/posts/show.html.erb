@@ -1,6 +1,6 @@
 <div class="post-details">
   <div class="post-show">
-   <p><%= link_to @post.user.nickname, user_path(@post.user.id) %>さんのクローゼット</p>
+   <p><%= link_to @post.user.nickname, user_path(@post.user.id) %>さんのクローゼットを見にいく</p>
    <p>件名：<%= @post.title %></p>
    <% @post.images.each do |image| %>
     <%= image_tag(image.variant(resize:'500x300')) %>      

@@ -58,14 +58,15 @@ h1 {
 
 .new-post {
   text-decoration: none;
-
 }
- .login {
+.login {
   text-decoration: none;
-
  }
 
- .sign-up {
+.sign-up {
   text-decoration: none;
-
  }
+
+.my-closet {
+  text-decoration: none;
+}
