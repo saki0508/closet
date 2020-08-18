@@ -1,0 +1,15 @@
+<div class="add-btn">
+ <li><%= link_to '服追加', new_item_path,  class: "add-clothes" %></li>
+</div>
+
+<div class="items">
+  <% @items.each do |item| %>
+    <li class="item">
+      <p><%= item.name %></p>
+      <%= image_tag(item.image.variant(resize:'300x300')) %>
+    </li>
+    <% if current_user.id == item.user.id %>
+       <%= link_to '削除', item_path(item.id), method: :delete, data: { confirm: "削除しますか？" }, class:'item-destroy' %>
+    <%end%>
+  <% end %>
+</div>

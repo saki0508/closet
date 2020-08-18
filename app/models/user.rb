@@ -6,7 +6,8 @@ class User < ApplicationRecord
  
   has_many :posts 
   has_many :comments
-         
+  has_many :items
+  
  validates :nickname, presence: true
  validates :password, format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i, message: "include both letters and numbers"} #半角英数字どちらも
  

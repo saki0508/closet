@@ -15,7 +15,7 @@
          <nav>
            <ul class="user_info">
            <% if user_signed_in? %>
-             <li><a href="#">my closet</a></li>
+             <li><%= link_to 'my closet',  "/users/#{current_user.id}",  class: "my-closet" %></li>
              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
              <li><%= link_to 'ファッション相談', new_post_path, class: "new-post" %></li>
            <%else%>        
