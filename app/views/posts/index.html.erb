@@ -17,9 +17,6 @@
          <%= image_tag(image.variant(resize:'500x300')) %>
        <% end %>
        <%end%>
-       <% if user_signed_in? && current_user.id == post.user.id %>
-       <%= link_to '削除', post_path(post.id), method: :delete, data: { confirm: "削除しますか？" }, class:'post-destroy' %>
-       <%end%>
       </li>
      <% end %>
     </div>

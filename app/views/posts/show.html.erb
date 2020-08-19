@@ -12,6 +12,7 @@
 <div class="edit-btn">
  <% if user_signed_in? && current_user.id == @post.user.id %>
   <%= link_to '編集する', edit_post_path(@post.id), class:'post-edit' %>
+  <%= link_to '削除', post_path(@post.id), method: :delete, data: { confirm: "削除しますか？" }, class:'post-destroy' %>
  <%end%>
 </div>
 
