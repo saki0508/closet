@@ -2,7 +2,7 @@
 .title-container {
   height: 400px;
   width: 100vw;
-  background-image: url("top_page.jpg"); 
+  background-image: url("../top_page.jpg"); 
   opacity: 0.8;
   background-size: cover;
   background-repeat: no-repeat;
