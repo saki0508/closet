@@ -1,6 +1,7 @@
 window.addEventListener('load', function(){
-  
- var button = document.getElementById("text-button")
+  document.addEventListener("turbolinks:load"
+  , function () {
+  var button = document.getElementById("text-button")
   button.onclick = function() {
     
     var request = new XMLHttpRequest();
@@ -33,5 +34,6 @@ window.addEventListener('load', function(){
 
    }
   };
-  
+ })
+
 })
