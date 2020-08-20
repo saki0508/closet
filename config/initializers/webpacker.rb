@@ -1,0 +1,1 @@
+Webpacker::Compiler.env["OPEN_WEATHER_MAP_API"] = ENV["OPEN_WEATHER_MAP_API"]
