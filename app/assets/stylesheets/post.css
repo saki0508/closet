@@ -14,27 +14,102 @@
 .title-container,h2 {
   color: #1760a0;
   font-size: 50px;
+  padding: 0 10px;
+  background-color: white;
   
 }
 
 .post-container {
-  margin-top: 150px;
+  background-color: #f6f0cc;
 }
 
 .post-title {
   display: flex;
   justify-content: center;
   font-size: 30px;
+  padding-top: 180px;
+  
+}
+
+hr {
+  size: 10;
   margin-bottom: 100px;
+}
+
+.posts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .post {
   list-style: none;
   margin-bottom: 100px;
+  padding: 20px 0 30px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: grey solid 1px;
+  border-radius: 30px; */
+}
+
+.user-name {
+  margin-bottom: 10px;
+  border-bottom: gray 0.5px solid;
+}
+
+.subject {
+  margin-bottom: 5px;
+}
+
+.subject:hover {
+  color :#4CAF50;
+}
+
+.subject-and-image {
+  text-decoration: none;
+}
+
+
+.show-container {
+  background-color:  #f6f0cc;
+  padding-top: 50px;
 }
 
 .post-details {
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+}
+
+.post-show {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-closet {
+  margin-bottom: 20px;
+  color: #1760a0;
+}
+
+.to-closet:hover {
+  color :#4CAF50;
+}
+.fa {
+  margin-right: 5px;
+}
+
+.show-subject {
+  margin-bottom: 10px;
+
+}
+
+.post-text {
+  border: olivedrab solid 1px;
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 10px;
+
 }

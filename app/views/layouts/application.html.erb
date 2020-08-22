@@ -5,20 +5,24 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag %>
   </head>
   <body>
     <header class="header">
       <div class="header_bar">
-         <h1><%= link_to 'good closet', "/", class: "header-title" %></h1>
+         <h1><%= link_to 'GOOD CLOSET', "/", class: "header-title" %></h1>
          <nav>
            <ul class="user_info">
            <% if user_signed_in? %>
+             <p class="welcome">ようこそ<%= current_user.nickname %>さん</p>
              <li><%= link_to 'my closet',  "/users/#{current_user.id}",  class: "my-closet" %></li>
              <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
              <li><%= link_to 'ファッション相談', new_post_path, class: "new-post" %></li>
-             <li><%= link_to '天気を見る',  weather_index_path, class: "wheather" %></li>
+             <li><%= link_to '天気を見る',  weather_index_path, class: "weather" %></li>
            <%else%>        
              <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li> 
              <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>
@@ -26,9 +30,7 @@
            </ul>
          </nav>
       </div>
-     <% if user_signed_in?  %> 
-      <p><%= current_user.nickname %>さん</p>
-     <%end%>
+     
     </header>
       <%= yield %>
     <footer>

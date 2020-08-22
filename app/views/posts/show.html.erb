@@ -1,17 +1,18 @@
+<div class="show-container">
 <div class="post-details">
   <div class="post-show">
-   <p><%= link_to @post.user.nickname, user_path(@post.user.id) %>さんのクローゼットを見にいく</p>
-   <p>件名：<%= @post.title %></p>
+   <p class="link-closet"><i class="fa fa-home"></i><%= link_to @post.user.nickname, user_path(@post.user.id), class:"to-closet" %>さんのクローゼットを見にいく</p>
+   <p class="show-subject"><b>件名</b>：<%= @post.title %></p>
    <% @post.images.each do |image| %>
-    <%= image_tag(image.variant(resize:'500x300')) %>      
+    <%= image_tag(image.variant(resize:'500x300'), class:"show-image") %>      
    <% end %>
-   <p>相談内容：<%= @post.text %></p>
+   <p class="post-text"><b>相談内容：</b><%= @post.text %></p>
   </div> 
 </div>
 
 <div class="edit-btn">
  <% if user_signed_in? && current_user.id == @post.user.id %>
-  <%= link_to '編集する', edit_post_path(@post.id), class:'post-edit' %>
+  <%= link_to '編集', edit_post_path(@post.id), class:'post-edit' %>
   <%= link_to '削除', post_path(@post.id), method: :delete, data: { confirm: "削除しますか？" }, class:'post-destroy' %>
  <%end%>
 </div>
@@ -39,5 +40,6 @@
         <% end %>
       <% end %>
     </div>
+</div>
 </div>
 

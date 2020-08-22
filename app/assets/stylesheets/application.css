@@ -9,18 +9,22 @@
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
- *
+ 
  *= require_tree .
- *= require_self
+ *= require font-awesome
  */
+ 
  * {
   box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
+ 
 
 
  
 header {
-  background-color: lightpink;
+  background-color: #f7c6bd;
+  
 }
 
 .header_bar {
@@ -29,12 +33,20 @@ header {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 40px;
 }
 
 .header-title {
   text-decoration: none;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-left: 30px;
+  color: #432c02;
 
+}
+
+nav {
+  display: flex;
+  align-items: center;
 }
 
 .user_info{
@@ -46,7 +58,11 @@ h1 {
  
 }
 
-.user_info, li {
+.welcome {
+  color: #1760a0;
+}
+
+.user_info,li,p {
   margin-left: 15px;
   margin-right: 15px;
   
@@ -54,19 +70,33 @@ h1 {
 
 .logout {
   text-decoration: none;
+  color: #432c02;
 }
 
 .new-post {
   text-decoration: none;
+  color: #432c02;
 }
 .login {
   text-decoration: none;
+  color: #432c02;
  }
 
 .sign-up {
   text-decoration: none;
+  color: #432c02;
  }
 
 .my-closet {
   text-decoration: none;
+  color: #432c02;
+}
+
+.weather {
+  text-decoration: none;
+  color: #432c02;
+}
+
+footer {
+  background-color: #f7c6bd;
 }
