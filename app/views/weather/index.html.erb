@@ -1,19 +1,22 @@
-
-
-<p>
-  <span id="area" >現在の天気</span>
-</p>
-
-<p>
-  <span id="weather" ></span>
-</p>
-
-<p>
-  <span id="icon" ></span>
-</p>
-
-<p>
-  <span id="temp" ></span>
-</p>
-
-<input type="submit" value="天気を見る", id = "text-button">
+<div class="weather-main">
+  <div class="weather-container">
+    <h2 class="weather-title">Check the Weather</h2>
+    <p class="sub-title">天気を見て、今日のファッションの参考にしよう</p>
+    <p class="input-desc">※県名、都市名など半角英字で入力してください</p>
+    <div>
+      <div class="weather-form">
+        <input type="text" id="input_city" value="" placeholder="例：tokyo">
+      </div>
+      <div class="weather-button">
+        <input type="button" id="input_button" value="天気を見る">
+      </div>
+    </div>
+    <div class="weather-content">
+      <p>現在の天気</p>
+      <p><span id="weather" ></span></p>
+      <p><span id="icon" ></span></p>
+      <p>気温：<span id="temp" ></span>℃</p>
+    </div>
+    <%= link_to "TOPへ戻る", "/" , class:"return" %>
+  </div>
+</div>
