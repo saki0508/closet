@@ -1,4 +1,4 @@
-
+/* トップページ */
 .title-container {
   height: 400px;
   width: 100vw;
@@ -67,7 +67,7 @@ hr {
   text-decoration: none;
 }
 
-
+/* 詳細画面 */
 .show-container {
   min-height: 100vh;
   background-color:  #f6f0cc;
@@ -127,5 +127,52 @@ hr {
 
 .post-edit:hover,.post-destroy:hover {
   color: #4CAF50
+}
+
+/* 投稿画面 */
+.add-post-main {
+  min-height: 100vh;
+  background-color: #f6f0cc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-post-title {
+  color: #432c02;
+  margin: 30px 0 20px;
+}
+
+.input-title {
+  height: 2em;
+}
+
+.input-title,.input-text {
+  border: #432c02 solid 1px;
+}
+
+.add-text {
+  margin-bottom: 10px;
+}
+
+.post-submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.post-submit-btn {
+  padding: 1px 10px;
+  text-decoration: none;
+  background: skyblue;
+  color: white;
+  border-bottom: solid 4px #4699ca;
+  border-radius: 3px;
+}
+
+.post-submit-btn:active {
+  -webkit-transform: translateY(4px);
+  transform: translateY(4px)
 }
 

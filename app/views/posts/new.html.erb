@@ -1,27 +1,29 @@
-<h1>Add Post</h1>
+<div class="add-post-main">
+  <h1 class="add-post-title">相談内容を入力</h1>
 
-<%= form_with model: @post do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <%= form_with model: @post do |form| %>
+    <div class="add-title">
+      <%= form.label :件名 %> <a>※必須</a>
+      <%= form.text_field :title, class:"input-title", placeholder:"例：コーディネートで悩んでいます" %>
+    </div>
 
-  <div>
-    <%= form.label :text %>
-    <%= form.text_field :text %>
-  </div>
+    <div class="add-text">
+      <%= form.label :相談内容 %> <a>※必須</a>
+      <%= form.text_area :text, class:"input-text" %>
+    </div>
 
-  <div>
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
+    <div>
+      <%= form.label :画像 %>
+      <%= form.file_field :images, multiple: true %>
+    </div>
 
-  <div>
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
+    <div>
+      <%= form.label :画像 %>
+      <%= form.file_field :images, multiple: true %>
+    </div>
 
-  <div>
-    <%= form.submit '送信' %>
-  </div>
-<% end %>
+    <div class="post-submit">
+      <%= form.submit '送信する', class:"post-submit-btn" %>
+    </div>
+  <% end %>
+</div>
