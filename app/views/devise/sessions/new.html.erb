@@ -1,33 +1,21 @@
-<div class='account-page' id='account-page'>
-  <div class='account-page__inner clearfix'>
-    <div class='account-page__inner--left account-page__header'>
-      <h2>Log in</h2>
-      <h5>登録しているユーザーでログイン</h5>
-      
-    </div>
-    <div class='account-page__inner--right user-form'>
-      <%= form_with model: @user, url:user_session_path, local: true do |f|%>
-        <div class='field'>
-          <div class='field-label'>
-            <%= f.label :email%>
-          </div>
-          <div class='field-input'>
-            <%= f.email_field :email, autofocus: true%>
-          </div>
-          <div class='field'>
-            <div class='field-label'>
-              <%= f.label :password%>
-              <i>(英数字6文字以上)</i>
-            </div>
-            <div class='field-input'>
-              <%= f.password_field :password, autocomplete: "off"%>
-            </div>
-          </div>
-          <div class='actions'>
-            <%= f.submit "Log in", class: 'btn'%>
-          </div>
-        </div>
-      <% end %>
-    </div>
+<div class="session">
+  <h1 class="session-title">Log in</h1>
+  <h4 class="session-sub-title">登録しているユーザーでログイン</h4>
+  <%= form_with model: @user, url:user_session_path, local: true do |f|%>
+  <div>
+    <%= f.label :email%>
+  </div>  
+  <div>
+    <%= f.email_field :email, class:"input-email"%>
   </div>
+  <div>
+    <%= f.label :password%><i>(英数字6文字以上)</i>
+  </div>
+  <div>
+    <%= f.password_field :password, class:"input-password"%>
+  </div>
+  <div class="login-btn">
+    <%= f.submit "Log in", class:"btn"%>
+  </div>
+  <% end %>
 </div>
