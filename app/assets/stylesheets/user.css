@@ -112,3 +112,54 @@
   padding: 0;
   font-size: 13px;
 }
+
+
+/* マイページ */
+
+.closet-main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f6f0cc;
+}
+
+.closet-title{
+  margin: 0 30px;
+  padding-top: 20px;
+  font-size: 20px;
+  color: #1760a0;
+}
+
+.add-items {
+  text-decoration: none;
+  background: skyblue;
+  color: white;
+  border-bottom: solid 4px #4699ca;
+  border-radius: 3px;
+  padding: 0 3px;
+  margin-left: 50px;
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 40px;
+  padding:0 10px;
+}
+
+.item-container {
+  margin-bottom: 40px;
+}
+
+.item {
+  list-style: none;
+  text-align-last: center;
+}
+
+.destroy-button {
+  text-align-last: center;
+  font-size: 12px;
+}
+
+.item-destroy:hover{
+  color: #4CAF50;
+}

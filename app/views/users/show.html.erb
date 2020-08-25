@@ -1,21 +1,29 @@
-<div class="closet-title">
-  <%= @user.nickname %>さんのクローゼット
-</div>
+<div class="closet-main">
 
-<div class="add-btn">
-  <% if current_user.id == @user.id %>
-    <li><%= link_to '服追加', new_item_path,  class: "add-clothes" %></li>
-  <% end %>
-</div>
+  <div class="closet-title">
+   <%= @user.nickname %>さんのクローゼット
+  </div>
 
-<div class="items">
-  <% @items.each do |item| %>
-    <li class="item">
-      <p><%= item.name %></p>
-      <%= image_tag item.image.variant(resize:'300x300') %>
-    </li>
-    <% if current_user.id == item.user.id %>
-       <%= link_to '削除', item_path(item.id), method: :delete, data: { confirm: "削除しますか？" }, class:'item-destroy' %>
-    <%end%>
-  <% end %>
+  <div class="add-btn">
+    <% if current_user.id == @user.id %>
+      <%= link_to 'アイテムを追加する', new_item_path,  class: "add-items" %>
+    <% end %>
+  </div>
+
+  <div class="items">
+    <% @items.each do |item| %>
+    <div class="item-container">
+      <li class="item">
+        <p><%= item.name %></p>
+        <%= image_tag item.image.variant(resize:'300x200'), class:"closet-image" %>
+      </li>
+      <% if current_user.id == item.user.id %>
+        <div class="destroy-button">
+          <%= link_to '削除', item_path(item.id), method: :delete, data: { confirm: "削除しますか？" }, class:'item-destroy' %>
+        </div>
+      <%end%>
+    </div>
+    <% end %>
+  </div>
+
 </div>

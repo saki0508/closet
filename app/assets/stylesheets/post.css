@@ -69,6 +69,7 @@ hr {
 
 
 .show-container {
+  min-height: 100vh;
   background-color:  #f6f0cc;
   padding-top: 50px;
 }
@@ -93,6 +94,7 @@ hr {
 .to-closet:hover {
   color :#4CAF50;
 }
+
 .fa {
   margin-right: 5px;
 }
