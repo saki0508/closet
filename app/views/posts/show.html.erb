@@ -10,22 +10,24 @@
   </div> 
 </div>
 
-<div class="edit-btn">
+<div class="edit-destroy-container">
+ <div class="edit-destroy-btn">
  <% if user_signed_in? && current_user.id == @post.user.id %>
   <%= link_to '編集', edit_post_path(@post.id), class:'post-edit' %>
   <%= link_to '削除', post_path(@post.id), method: :delete, data: { confirm: "削除しますか？" }, class:'post-destroy' %>
  <%end%>
+ </div>
 </div>
 
 <div class="comment-container">
     <div class="comment-form">
      <% if current_user %>
        <%= form_with(model: [@post, @comment], local: true) do |form| %>
-         <%= form.text_area :comment, placeholder: "コメントする" %>
-         <%= form.submit "SEND" %>
+         <%= form.text_area :comment, placeholder: "コメントする", class:"input-comment" %>
+         <%= form.submit "コメント送信", class:"comment-submit"%>
        <% end %>
      <% else %>
-       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
+       <strong><p class="comment-desc">※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p>
        </strong>
      <% end %>
     </div>
