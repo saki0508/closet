@@ -9,7 +9,7 @@ window.addEventListener('load', function(){
       var city = input.value;
       var request = new XMLHttpRequest();
       var API_KEY = process.env.OPEN_WEATHER_MAP_API
-      request.open("GET", "http://api.openweathermap.org/data/2.5/weather?q="+city+"&lang=ja&units=metric&APPID="+API_KEY, true);
+      request.open("GET", "https://api.openweathermap.org/data/2.5/weather?q="+city+"&lang=ja&units=metric&APPID="+API_KEY, true);
       request.responseType = 'json'
       request.send();
 
