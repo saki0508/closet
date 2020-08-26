@@ -14,6 +14,10 @@ window.addEventListener('load', function(){
       request.send();
 
       request.onload = function (){
+        if (request.status != 200) {
+          alert(`Error ${request.status}: ${request.statusText}`);
+          return null;
+        }
         var data = this.response;
         var img = document.createElement('img');
         img.src = "http://openweathermap.org/img/w/"+data.weather[0].icon+".png";
@@ -21,13 +25,10 @@ window.addEventListener('load', function(){
         var temperature = Math.floor(data.main.temp) ;
         var weather = data.weather[0].description;
 
-        document.getElementById('weather').innerHTML = weather;
+        document.getElementById('weather').innerHTML = weather
         document.getElementById('icon').appendChild(img);
         document.getElementById('temp').innerHTML =  temperature;
-
-
       }
     }
   })
 })
-
