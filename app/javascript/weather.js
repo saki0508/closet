@@ -20,7 +20,7 @@ window.addEventListener('load', function(){
         }
         var data = this.response;
         var img = document.createElement('img');
-        img.src = "http://openweathermap.org/img/w/"+data.weather[0].icon+".png";
+        img.src = "https://openweathermap.org/img/w/"+data.weather[0].icon+".png";
         img.alt = data.weather[0].main;
         var temperature = Math.floor(data.main.temp) ;
         var weather = data.weather[0].description;
