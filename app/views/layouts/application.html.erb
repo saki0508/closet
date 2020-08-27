@@ -15,7 +15,9 @@
   <body>
     <header class="header">
       <div class="header_bar">
-         <h1><%= link_to 'GOOD CLOSET', "/", class: "header-title" %></h1>
+         <div class="header-title-container">
+            <h1><%= link_to 'GOOD CLOSET', "/", class: "header-title" %></h1>
+         </div>
          <nav>
            <ul class="user_info">
            <% if user_signed_in? %>

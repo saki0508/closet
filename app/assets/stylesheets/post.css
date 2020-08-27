@@ -180,8 +180,6 @@ hr {
   transform: translateY(4px)
 }
 
-
-
 /* 小型スマホ横表示時 */
 @media (max-width: 600px) {
   .post-image {
@@ -217,7 +215,6 @@ hr {
    }
 }
 
-
 /* スマホ縦表示時 */
 @media (max-width: 500px) {
  .post-title {
@@ -227,18 +224,17 @@ hr {
  .post {
    width: 60%;
   }
-
 }
 
 /* 小型スマホ縦表示時 */
 @media (max-width: 320px) {
   .post-title {
     padding-top: 50px;
-    font-size: 20px;
+    font-size: 25px;
   }
 
  .title-container,h2 {
-   font-size: 40px;
+   font-size: 30px;
   }
   
  .show-image {
@@ -246,11 +242,11 @@ hr {
   }
 
   .sub-container {
-    width: 85%;
+    width: 70%;
+    font-size: 12px;
   }
 
   .add-post-images {
     width: 80vw;
-    font-size: 15px;
   }
 }
