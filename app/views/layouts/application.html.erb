@@ -4,6 +4,7 @@
     <title>GoodCloset</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
@@ -19,10 +20,15 @@
            <ul class="user_info">
            <% if user_signed_in? %>
              <p class="welcome">ようこそ<%= current_user.nickname %>さん</p>
-             <li><%= link_to 'ファッション相談', new_post_path, class: "new-post" %></li>
-             <li><%= link_to 'my closet',  "/users/#{current_user.id}",  class: "my-closet" %></li>
-             <li><%= link_to '天気を見る',  weather_index_path, class: "weather" %></li>
-             <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+             <li class="dropdown_container">
+              <span>メニュー</span>
+              <ul>
+                <li><%= link_to 'ファッション相談', new_post_path, class: "new-post" %></li>
+                <li><%= link_to 'my closet',  "/users/#{current_user.id}",  class: "my-closet" %></li>
+                <li><%= link_to '天気を見る',  weather_index_path, class: "weather" %></li>
+                <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+              </ul>
+             </li>
            <%else%> 
              <li><%= link_to 'ログイン', "/users/sign_in", class: "login" %></li> 
              <li><%= link_to '新規登録', "/users/sign_up", class: "sign-up" %></li>

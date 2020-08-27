@@ -35,7 +35,7 @@
 }
 
 
-/* マイページ */
+/* マイクローゼット */
 .closet-main {
   width: 100%;
   min-height: 100vh;
@@ -61,7 +61,8 @@
 
 .items {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  flex-wrap: wrap;
+  grid-template-columns: 25% 25% 25% 25%;
   margin-top: 40px;
   padding:0 10px;
 }
@@ -83,3 +84,47 @@
 .item-destroy:hover{
   color: #4CAF50;
 }
+
+
+
+/* タブレット横表示時 */
+@media (max-width: 1024px) {
+  .items {
+    grid-template-columns:33% 33% 33%;
+  }
+}
+
+/* タブレット縦、スマホ横表示時 */
+@media (max-width: 900px) {
+  .items {
+    grid-template-columns: 50% 50%;
+  }
+}
+
+
+/* 小型スマホ横表示時 */
+@media (max-width: 600px) {
+  .session-title,.registration-title {
+    font-size:30px;
+    margin: 20px 0 10px;
+  }
+
+  .login-btn,.sign-up-btn {
+    margin: 20px 0 30px;
+  }
+  
+  .items {
+    grid-template-columns: 100%;
+  }
+}
+
+
+/* 小型スマホ縦表示時 */
+@media (max-width: 320px) {
+  .closet-image {
+    width: 250px;
+    max-height: 250px;
+  }
+}
+
+

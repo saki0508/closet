@@ -1,4 +1,5 @@
 <div class="add-item-main">
+ <div class="add-item-sub">
   <h1 class="add-item-title">アイテムを追加</h1>
   <%= form_with model:@item, url: items_path, method: :post, local: true do |form| %>
     <div>
@@ -8,11 +9,12 @@
 
     <div>
       <%= form.label :画像 %><p>※必須</p>
-      <%= form.file_field :image %>
+      <%= form.file_field :image, class:"new-image" %>
     </div>
 
     <div class="item-submit">
       <%= form.submit '送信する', class:"item-submit-btn" %>
     </div>
   <% end %>
+ </div>
 </div>

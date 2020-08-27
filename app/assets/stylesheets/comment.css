@@ -55,3 +55,11 @@
   padding: 3px 5px;
 
 }
+
+
+/* 小型スマホ横表示時 */
+@media (max-width: 600px) {
+ .comment {
+   width: 70%;
+ }
+}

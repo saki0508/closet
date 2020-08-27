@@ -21,10 +21,8 @@
  
 
 
- 
 header {
   background-color: #f7c6bd;
-  
 }
 
 .header_bar {
@@ -47,55 +45,78 @@ h1 {
 nav {
   display: flex;
   align-items: center;
-}
+} 
 
 .user_info{
   display: flex;
   justify-content: space-around;
+  align-items: center;
   list-style: none;
   text-decoration:none ;
-
- 
+  margin-left: 15px;
+  margin-right: 100px;
+  color: #432c02;
 }
 
 .welcome {
   color: #1760a0;
+  margin-right: 50px;
 }
 
-.user_info,li,p {
-  margin-left: 15px;
-  margin-right: 15px;
-  
-}
 
-.logout {
-  text-decoration: none;
-  color: #432c02;
-}
-
-.new-post {
-  text-decoration: none;
-  color: #432c02;
-}
 .login {
   text-decoration: none;
   color: #432c02;
- }
+  margin-right: 20px;
+}
 
 .sign-up {
   text-decoration: none;
   color: #432c02;
- }
-
-.my-closet {
-  text-decoration: none;
-  color: #432c02;
+}
+ 
+.dropdown_container{
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+ 
+.dropdown_container > ul{
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  background-color: #f7c6bd;
+  height: 0;
+  overflow: hidden;
+  border: none;
+  z-index: 2;
+}
+ 
+.dropdown_container:hover > ul{
+  height: auto;
+  width: 150px;
 }
 
-.weather {
-  text-decoration: none;
+.dropdown_container:hover > ul li{
+  padding: 5px;
+  
+} 
+
+.dropdown_container a {
+  display: block;
   color: #432c02;
+  text-decoration: none;
+  
 }
+.dropdown_container a:hover {
+    background-color: #f6f0cc;
+}
+
 
 footer {
   background-color: #f7c6bd;
