@@ -6,7 +6,7 @@
    <% @post.images.each do |image| %>
     <%= image_tag(image.variant(resize:'500x300'), class:"show-image") %>      
    <% end %>
-   <p class="post-text"><b>相談内容：</b><%= @post.text %></p>
+   <p class="post-text"><b>相談内容：</b><%= safe_join(@post.text.split("\n"),tag(:br)) %></p>
   </div> 
 </div>
 
@@ -37,7 +37,7 @@
         <% @comments.each do |comment| %>
           <p class="comment">
             <strong><%= comment.user.nickname %>：</strong>
-            <%= comment.comment %>
+            <%= safe_join(comment.comment.split("\n"),tag(:br)) %>
           </p>
         <% end %>
       <% end %>

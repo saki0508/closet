@@ -115,6 +115,8 @@ nav {
 
 footer {
   background-color: #f7c6bd;
+  display: flex;
+  justify-content: center;
 }
 
 

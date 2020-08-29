@@ -1,25 +1,31 @@
-<%= form_with model:@post, url: post_path(@post.id), method: :patch, local: true do |form| %>
-  <div>
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+<div class="add-post-main">
+ <div class="sub-container">
+  <h1 class="add-post-title">投稿を編集</h1>
 
-  <div>
-    <%= form.label :text %>
-    <%= form.text_field :text %>
-  </div>
+  <%= form_with model:@post, url: post_path(@post.id), method: :patch, local: true do |form| %>
+    <div class="add-title">
+      <%= form.label :件名 %>
+      <%= form.text_field :title, class:"input-title" %>
+    </div>
 
-  <div>
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
+    <div class="add-text">
+      <%= form.label :相談内容 %>
+      <%= form.text_area :text, class:"input-text" %>
+    </div>
 
-  <div>
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple: true %>
-  </div>
+    <div class="add-images">
+      <%= form.label :画像 %>
+      <%= form.file_field :images, class:"add-post-images", multiple: true %>
+    </div>
 
-  <div>
-    <%= form.submit '送信' %>
-  </div>
-<% end %>
+    <div class="add-images">
+      <%= form.label :画像 %>
+      <%= form.file_field :images, class:"add-post-images", multiple: true %>
+    </div>
+
+    <div class="post-submit">
+      <%= form.submit '編集する', class:"post-submit-btn" %>
+    </div>
+  <% end %>
+ </div>
+</div>
