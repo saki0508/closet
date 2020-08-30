@@ -5,14 +5,15 @@
 }
 
 .weather-container {
- min-height: 100vh;
- width: 50%;
- display: flex;
- flex-direction: column;
- align-items: center;
+  min-height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .weather-title {
+  font-size: 50px;
   color: #432c02;
   background-color: #f6f0cc;
   margin-top: 30px;
