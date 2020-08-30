@@ -22,3 +22,50 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# テーブル設計
+
+## users テーブル
+| Column                | Type    | Options     |
+| --------------------- | ------- | ----------- |
+| nickname              | string  | null: false |
+| email                 | string  | null: false |
+| password              | string  | null: false |
+| password_confirmation | string  | null: false |
+
+### Association 
+- has_many :posts
+- has_one :items
+
+## items テーブル
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| name             | string     | null: false                    |
+| user             | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :user
+- has_one_attached :image
+
+## posts テーブル
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| title            | string     | null: false                    |
+| text             | text       | null: false                    |
+| user             | references | null: false, foreign_key: true |
+
+### Association
+- has_many :comments
+- belongs_to :user
+- has_many_attached :images
+
+## comments テーブル
+| Column           | Type       | Options                        |
+| ---------------- | ---------- | ------------------------------ |
+| comment          | text       | null: false                    |
+| post             | references | null: false, foreign_key: true |
+| user             | references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :post
+- belongs_to :user
