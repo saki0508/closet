@@ -25,8 +25,14 @@ window.addEventListener('load', function(){
         var temperature = Math.floor(data.main.temp) ;
         var weather = data.weather[0].description;
 
-        document.getElementById('weather').innerHTML = weather
-        document.getElementById('icon').appendChild(img);
+        document.getElementById('weather').innerHTML = weather;
+
+        var weatherImage = document.getElementById('icon')
+        if ( weatherImage.innerHTML != ""){
+          weatherImage.innerHTML = null
+        }
+        weatherImage.appendChild(img);
+
         document.getElementById('temp').innerHTML =  temperature;
       }
     }
