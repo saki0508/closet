@@ -166,7 +166,7 @@ footer {
 }
 
 /* 小型スマホ縦表示時 */
-@media (max-width: 320px) {
+@media (max-width: 415px) {
   .header-title {
     font-size: 11px;
   }
