@@ -45,7 +45,7 @@
 }
 
 /* 小型スマホ縦表示時 */
-@media (max-width: 320px) {
+@media (max-width: 415px) {
   .add-item-sub {
     width: 70%;
     font-size: 12px;

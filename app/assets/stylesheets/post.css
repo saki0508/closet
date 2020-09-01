@@ -210,6 +210,10 @@ hr {
 
 /* 小型スマホ横表示時 */
 @media (max-width: 600px) {
+ .fade-in {
+   font-size: 13px;
+  }
+
   .post-image {
     width: 80%;
   }
@@ -245,6 +249,14 @@ hr {
 
 /* スマホ縦表示時 */
 @media (max-width: 500px) {
+ .fade-in {
+  font-size: 10px;
+ }
+
+ .fade-in-btn{
+   font-size: 15px;
+  }
+
  .post-title {
    padding-top: 80px;
   }
@@ -255,7 +267,10 @@ hr {
 }
 
 /* 小型スマホ縦表示時 */
-@media (max-width: 320px) {
+@media (max-width: 415px) {
+  .fade-in {
+    padding: 0 10px;
+   }
   .post-title {
     padding-top: 50px;
     font-size: 25px;

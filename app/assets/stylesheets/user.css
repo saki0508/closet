@@ -120,7 +120,7 @@
 
 
 /* 小型スマホ縦表示時 */
-@media (max-width: 320px) {
+@media (max-width: 415px) {
   .closet-image {
     width: 250px;
     max-height: 250px;
