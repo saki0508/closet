@@ -15,7 +15,7 @@ window.addEventListener('load', function(){
 
       request.onload = function (){
         if (request.status != 200) {
-          alert(`Error ${request.status}: ${request.statusText}`);
+          alert(` エラーです。もう一度入力してください。`);
           return null;
         }
         var data = this.response;
