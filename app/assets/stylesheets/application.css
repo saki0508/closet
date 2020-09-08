@@ -31,6 +31,7 @@ header {
 
 .header-title {
   margin-left: 30px;
+  width: 400px;
 }
 
 nav {
@@ -113,19 +114,30 @@ footer {
   justify-content: center;
 }
 
+
+/* タブレット縦、スマホ横表示時 */
+@media (max-width: 900px) {
+ header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+ }
+
+ .header-title {
+  width: 250px;
+ }
+
+ .header-title-container {
+  display: flex;
+  align-items: center;
+
+}
+
+}
+
+
  /* 小型スマホ横表示時 */
 @media (max-width: 600px) {
- header {
-   height: 80px;
-   display: flex;
-   align-items: center;
-  }
-
-  .header-title-container {
-    display: flex;
-    align-items: center;
-  }
-
  .header-title {
    width: 100px;
   }
