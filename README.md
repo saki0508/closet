@@ -113,16 +113,11 @@
 - belongs_to :post
 - belongs_to :user
 
+## ER図
+< img src="/ER.png" >
+
 
 # ローカルでの動作方法
-### 環境
-- Ruby 2.6.5
-- Rails 6.0.0
-- DB mysql
-- Heroku
-- AWS/S3
-
-
 ### コマンド
 1. リポジトリをローカルにクローン
 ```
@@ -150,3 +145,10 @@ rails db:migrate
 rails s
 ```
 その後localhost:3000にアクセスして下さい。
+
+### 環境
+- Ruby 2.6.5
+- Rails 6.0.0
+- DB mysql
+- Heroku
+- AWS/S3
