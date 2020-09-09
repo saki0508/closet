@@ -124,23 +124,29 @@
 
 
 ### コマンド
+1. リポジトリをローカルにクローン
 ```
 git clone https://github.com/saki0508/closet.git
 ```
+2. ディレクトリの移動
 ```
 cd closet
 ```
+3. 必要なGemをインストール
 ```
-% bundle install
+bundle install
 ```
+4. javascriptパッケージ群のインストール
 ```
-% yarn install
+yarn install
 ```
+5. データベースを設定
 ```
-% rails db:create
-% rails db:migrate
+rails db:create
+rails db:migrate
 ```
+6. サーバーの起動
 ```
-% rails s
+rails s
 ```
 その後localhost:3000にアクセスして下さい。
