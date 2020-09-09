@@ -114,8 +114,14 @@
 - belongs_to :user
 
 ## ER図
-< img src="public/ER.png" >
+<img src="public/ER.png">
 
+# 環境
+- Ruby 2.6.5
+- Rails 6.0.0
+- DB mysql
+- Heroku
+- AWS/S3
 
 # ローカルでの動作方法
 ### コマンド
@@ -145,10 +151,3 @@ rails db:migrate
 rails s
 ```
 その後localhost:3000にアクセスして下さい。
-
-### 環境
-- Ruby 2.6.5
-- Rails 6.0.0
-- DB mysql
-- Heroku
-- AWS/S3
