@@ -8,7 +8,7 @@
 # URL
 <https://good-closet.herokuapp.com/>
 
-## Basic認証
+# Basic認証
 - ID:admin
 - Pass:2222
 
@@ -113,18 +113,34 @@
 - belongs_to :post
 - belongs_to :user
 
-## ER図
-![ER図](https://gyazo.com/e9ca70e2772b21756e4836db4c1da878)
 
 # ローカルでの動作方法
+### 環境
+- Ruby 2.6.5
 - Rails 6.0.0
+- DB mysql
+- Heroku
+- AWS/S3
 
-###コマンド
-% git clone https://github.com/saki0508/closet.git
-% cd closet
+
+### コマンド
+```
+git clone https://github.com/saki0508/closet.git
+```
+```
+cd closet
+```
+```
 % bundle install
+```
+```
 % yarn install
+```
+```
 % rails db:create
 % rails db:migrate
+```
+```
 % rails s
+```
 その後localhost:3000にアクセスして下さい。
