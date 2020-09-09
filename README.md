@@ -114,7 +114,7 @@
 - belongs_to :user
 
 ## ER図
-< img src="ER.png" >
+< img src="public/ER.png" >
 
 
 # ローカルでの動作方法
