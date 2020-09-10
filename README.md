@@ -78,7 +78,8 @@
 
 ### Association 
 - has_many :posts
-- has_one :items
+- has_many :items
+- has_many :comments
 
 ## items テーブル
 | Column           | Type       | Options                        |
