@@ -14,7 +14,7 @@
  <div class="edit-destroy-btn">
  <% if user_signed_in? && current_user.id == @post.user.id %>
   <%= link_to '編集', edit_post_path(@post.id), class:'post-edit' %>
-  <%= link_to '削除', post_path(@post.id), method: :delete, data: { confirm: "削除しますか？" }, class:'post-destroy' %>
+  <%= link_to '削除', post_path(@post.id), method: :delete, data: { confirm: "投稿を削除しますか？" }, class:'post-destroy' %>
  <%end%>
  </div>
 </div>
@@ -38,6 +38,11 @@
           <p class="comment">
             <strong><%= comment.user.nickname %>：</strong>
             <%= safe_join(comment.comment.split("\n"),tag(:br)) %>
+            <% if user_signed_in? && comment.user_id == current_user.id %>
+             <%= link_to  post_comment_path(@post, comment), method: :delete, data: { confirm: "コメントを削除しますか？" }, class:"comment-destroy" do %>
+               <span class="fa fa-trash-o"></span>
+             <%end%>
+            <% end %>
           </p>
         <% end %>
       <% end %>
