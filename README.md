@@ -67,7 +67,8 @@
 - 詳細: コーディネートをする上で必要な天気の情報を確認できる。
 
 # イメージ
-![image](https://user-images.githubusercontent.com/68307067/93031705-edce3500-f667-11ea-8fdd-67255479ea53.gif)
+![image](https://user-images.githubusercontent.com/68307067/93343833-ee371d80-f86b-11ea-8d93-37ef6bfeb75e.gif)
+
 
 # テーブル設計
 

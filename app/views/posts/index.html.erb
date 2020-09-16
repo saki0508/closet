@@ -25,18 +25,15 @@
      <% @posts.each do |post| %>
       <li class="post">
        <p class="user-name"><%= post.user.nickname %>さんの投稿</p>
-       <%= link_to post_path(post.id), class:"subject-and-image" do %>
        <p class="subject"><b>件名：</b><%= post.title %></p>
-       <%end%>
-       <div class="images">
-        <% post.images.each do |image| %>
-          <%= image_tag(image.variant(resize:'400x300'), class:"post-image") %>
-        <% end %>
-       </div>
-       
+       <%= link_to post_path(post.id), class:"subject-and-image" do %>
+          <%= image_tag post.images[0], class:"post-image" %>
+       <% end %>
+       <% if post.images[1] %>
+        <p>+1画像</p>
+       <% end %>
       </li>
      <% end %>
     </div>
-    
   </div>
 </div>
