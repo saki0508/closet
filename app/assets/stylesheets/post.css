@@ -195,6 +195,15 @@ hr {
   margin-bottom: 10px;
 }
 
+.add-images {
+  margin-bottom: 5px;
+}
+
+.add-image-desc {
+  font-size: 14px;
+  color: red;
+}
+
 .post-submit {
   display: flex;
   justify-content: center;
