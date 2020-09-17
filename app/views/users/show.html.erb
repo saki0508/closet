@@ -15,11 +15,13 @@
     <div class="item-container">
       <li class="item">
         <p><%= item.name %></p>
-        <%= image_tag item.image.variant(resize:'300x200'), class:"closet-image" %>
+        <%= image_tag item.image, class:"closet-image" %>
       </li>
       <% if current_user.id == item.user.id %>
         <div class="destroy-button">
-          <%= link_to '削除', item_path(item.id), method: :delete, data: { confirm: "削除しますか？" }, class:'item-destroy' %>
+          <%= link_to item_path(item.id), method: :delete, data: { confirm: "削除しますか？" }, class:'item-destroy' do %>
+            <span class="fa fa-trash-o"></span>
+          <% end %>
         </div>
       <%end%>
     </div>
