@@ -123,6 +123,7 @@ hr {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;
 }
 
 .link-closet {
@@ -245,6 +246,10 @@ hr {
 
  .images {
    justify-content: center;
+  }
+
+  .post-show {
+    width: 70%;
   }
 
   .add-post-title {
