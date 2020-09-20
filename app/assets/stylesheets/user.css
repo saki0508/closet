@@ -65,6 +65,7 @@
   grid-template-columns: 25% 25% 25% 25%;
   margin-top: 40px;
   padding:0 10px;
+  position: relative;
 }
 
 .closet-image {
