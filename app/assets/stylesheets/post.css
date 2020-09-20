@@ -49,6 +49,7 @@
 
 .post-container {
   background-color: #f6f0cc;
+  position: relative;
 }
 
 .post-title {
@@ -106,6 +107,14 @@ hr {
   transform: translateY(-5px);
   transition-duration: 0.5s;
 }
+
+.pagination {
+  position: absolute;
+  bottom: 0%;
+  right: 45vw;
+  margin-bottom:20px;
+}
+
 
 /* 詳細画面 */
 .show-container {
